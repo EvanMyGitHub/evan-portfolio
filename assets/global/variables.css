@@ -1,0 +1,14 @@
+:root {
+  --bg-dark: #0a0a0a;
+  --text-white: #ffffff;
+  --accent-blue: #bee1b1;
+  --text-muted: #a0a0a0;
+  --card-bg: #111111;
+  --border-color: #222222;
+  --accent-green: #2ecc71; 
+
+  /* Standard Spacing */
+  --global-padding: 0 10%;
+  --section-pad: 80px;
+  --nav-height: 80px;
+}

@@ -1,0 +1,224 @@
+/* Body */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+/* Main Wrapper */
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    width: 100%;
+    padding: 200px 20px 150px 20px;
+}
+
+/* Base Container */
+.contact-container {
+    max-width: 1140px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    width: 100%;
+}
+
+/* Left Content Text */
+.contact-text {
+    flex: 1;
+}
+
+.sub-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #aaaaaa;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact-text h1 {
+    font-size: 63px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Right Content: Form */
+.contact-form-wrapper {
+    flex: 1;
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    background-color: #121212;
+    border: 1px solid #222222;
+    padding: 18px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #555555;
+}
+
+/* Custom Placeholder Color */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #555555;
+}
+
+.btn-submit {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+.btn-submit:hover {
+    background-color: #e0e0e0;
+}
+
+/* Info Cards */
+.info-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.card {
+    background-color: #798279;
+    color: #ffffff;
+    flex: 1;
+    padding: 30px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Icon Resizer for SVG */
+.card-icon svg {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.card-text {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+
+/* =========================
+  RESPONSIVE BREAKPOINTS
+========================= */
+/* Tablet Layout (Max-width: 992px) */
+@media (max-width: 992px) {
+    .main-wrapper {
+        padding: 180px 40px 100px 40px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-text h1 {
+        font-size: 38px;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .sub-title {
+        text-align: center;
+    }
+
+    .info-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 22px;
+    }
+}
+
+/* Mobile Layout (Max-width: 600px) */
+@media (max-width: 600px) {
+    .navbar nav {
+        gap: 18px;
+    }
+    
+    .logo {
+        font-size: 26px;
+        margin: 0 5px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .contact-text h1 {
+        font-size: 28px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-info .separator {
+        display: none;
+    }
+
+    .card-text {
+        font-size: 15px;
+    }
+}

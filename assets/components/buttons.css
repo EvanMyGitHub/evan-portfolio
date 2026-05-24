@@ -1,0 +1,38 @@
+/* --- BUTTONS (Global) --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+/* PRIMARY BUTTON */
+
+.btn-primary {
+  background: var(--text-white);
+  color: #000;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+/* SECONDARY BUTTON */
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #fff;
+  color: var(--text-white);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-3px);
+}

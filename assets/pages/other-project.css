@@ -1,0 +1,156 @@
+/* Body */
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+/* Project grid */
+.projects-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 20px 100px 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* Project card */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+/* Card Hover Animation */
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0px 20px 40px rgba(255, 255, 255, 0.08);
+}
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px 20px;
+    text-align: center;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.tech-stack {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 18px;
+}
+
+/* View Code Link & Image Layout */
+.view-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+}
+
+.github-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.code-text {
+    text-decoration: underline;
+}
+
+.view-code:hover {
+    opacity: 0.7;
+}
+
+
+/* =========================
+  RESPONSIVE BREAKPOINTS
+========================= */
+/* Tablet (Max 992px) */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .nav-container {
+        gap: 40px;
+    }
+}
+
+/* Mobile (Max 600px) */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .logo {
+        order: -1;
+    }
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .footer-contact-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .separator {
+        display: none;
+    }
+}

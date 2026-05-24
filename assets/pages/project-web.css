@@ -1,0 +1,163 @@
+/* Body */
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+/* Projects gallery grid (desktop: 3 Column x 3 Row) */
+.gallery-section {
+    flex: 1;
+    padding: 200px 0 150px 0;
+    background-color: #0b0b0b;
+}
+
+.gallery-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, auto);
+    gap: 50px 40px;
+    margin-bottom: 60px;
+}
+
+/* Project card structure */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover effect */
+.card-image-wrapper {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Card hover animation trigger */
+.project-card:hover .card-image-wrapper {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.02);
+}
+
+/* Live preview link style */
+.live-preview-link {
+    margin-top: 15px;
+    color: #888888;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .live-preview-link {
+    color: #ffffff;
+}
+
+/* Pagination controls */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pagination-arrow {
+    background-color: #ffffff;
+    color: #0b0b0b;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.pagination-arrow:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination-info {
+    font-size: 14px;
+    color: #ffffff;
+    min-width: 45px;
+    text-align: center;
+}
+
+
+/* =========================
+  RESPONSIVE BREAKPOINTS
+========================= */
+/* Tablet view 2 column x 2 row */
+@media (max-width: 992px) {
+    .gallery-container {
+    max-width: 700px !important;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 40px 30px;
+    }
+    
+    .nav-links {
+        gap: 25px;
+    }
+}
+
+/* Mobile view 1 column */
+@media (max-width: 576px) {
+    .gallery-container {
+    max-width: 350px !important;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 35px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links .brand-logo a {
+        font-size: 22px;
+    }
+
+    .footer-contact-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

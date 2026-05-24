@@ -1,0 +1,162 @@
+/* Body */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+/* Hero Intro Section */
+.projects-page-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 200px;
+    padding-right: 24px;
+    padding-bottom: 150px;
+    padding-left: 24px;
+    box-sizing: border-box;
+}
+
+.projects-hero-section {
+    text-align: left;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #999999;
+    text-transform: capitalize;
+}
+
+/* Responsive Projects Grid Setup */
+.projects-grid-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+/* Project Card Styling */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image-box {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: #222;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content-box {
+    padding: 3rem 2.5rem;
+    color: #111111;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #666666;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.project-tech-stack {
+    font-size: 0.85rem;
+    color: #999999;
+    margin-bottom: 1.2rem;
+}
+
+.project-live-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #111111;
+    text-decoration: underline;
+    align-self: flex-start;
+}
+
+/* =========================
+  RESPONSIVE BREAKPOINTS
+========================= */
+/* Tablet View */
+@media (min-width: 750px) and (max-width: 1024px) {
+    .section-subtitle {
+        width: 95%;
+    }
+    .projects-grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(2, auto) !important;
+        gap: 1rem;
+    }
+    
+    .project-content-box {
+        padding: 2.5rem 3rem;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .projects-grid-container {
+        grid-template-columns: 1fr; /* 1 Column na sya dito */
+        gap: 2rem;
+        padding: 10px;
+    }
+
+    .projects-hero-section {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-contact-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

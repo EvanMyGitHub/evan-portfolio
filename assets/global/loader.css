@@ -1,0 +1,192 @@
+/* =========================
+    GLOBAL & BODY SETUP
+========================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  /* Default: allow scrolling */
+  overflow-y: auto;
+}
+
+body.loading {
+  overflow: hidden;
+}
+
+/* =========================
+    PRELOADER CONTAINER
+========================= */
+#preloader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  background: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  z-index: 999999;
+  overflow: hidden;
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s;
+}
+
+#preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* =========================
+    LOADER SHAPES & ANIMATIONS
+========================= */
+.loader {
+  --path: #ffffff;
+  --dot: #dfeed9;
+  --duration: 3s;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--dot);
+  top: 37px;
+  left: 19px;
+  z-index: 2;
+  transform: translate(-12px, -12px);
+  animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.loader svg rect,
+.loader svg polygon,
+.loader svg circle {
+  fill: none;
+  stroke: var(--path);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.loader.triangle {
+  width: 68px;
+}
+.loader.triangle:before {
+  left: 21px;
+  transform: translate(-8px, -12px);
+  animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader svg polygon {
+  stroke-dasharray: 145 76 145 76;
+  stroke-dashoffset: 0;
+  animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader svg rect {
+  stroke-dasharray: 192 64 192 64;
+  stroke-dashoffset: 0;
+  animation: pathRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader svg circle {
+  stroke-dasharray: 150 50 150 50;
+  stroke-dashoffset: 75;
+  animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+@keyframes pathTriangle {
+  33% {
+    stroke-dashoffset: 74;
+  }
+  66% {
+    stroke-dashoffset: 147;
+  }
+  100% {
+    stroke-dashoffset: 221;
+  }
+}
+
+@keyframes dotTriangle {
+  33% {
+    transform: translate(0, 0);
+  }
+  66% {
+    transform: translate(8px, -12px);
+  }
+  100% {
+    transform: translate(-8px, -12px);
+  }
+}
+
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+  50% {
+    stroke-dashoffset: 128;
+  }
+  75% {
+    stroke-dashoffset: 192;
+  }
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+
+@keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(12px, -12px);
+  }
+  75% {
+    transform: translate(0, -24px);
+  }
+  100% {
+    transform: translate(-12px, -12px);
+  }
+}
+
+@keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+  50% {
+    stroke-dashoffset: 175;
+  }
+  75% {
+    stroke-dashoffset: 225;
+  }
+  100% {
+    stroke-dashoffset: 275;
+  }
+}
+
+.content {
+  padding: 50px;
+  line-height: 2;
+  max-width: 800px;
+  margin: auto;
+}

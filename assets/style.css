@@ -1,0 +1,15 @@
+/*global*/
+@import url("global/reset.css");
+@import url("global/responsive.css");
+@import url("global/variables.css");
+@import url("global/loader.css");
+
+/*components*/
+@import url("components/animation.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/footer.css");
+@import url("components/section-titles.css");
+@import url("components/social-icons.css");
+
+

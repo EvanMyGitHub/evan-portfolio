@@ -1,0 +1,21 @@
+.section-title{
+    margin-bottom: 60px;
+}
+
+.section-subtitle{
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.section-heading{
+    max-width: 700px;
+}
+
+.section-description{
+    max-width: 650px;
+    margin-top: 20px;
+}

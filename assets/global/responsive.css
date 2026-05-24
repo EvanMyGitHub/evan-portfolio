@@ -1,0 +1,34 @@
+/* --- PARENT VIEW CONTROL --- */
+/* Desktop View (Default) */
+.em-desktop { 
+  display: block; 
+}
+
+/* Tablet View Adjustments */
+@media (max-width: 1024px) {
+      .em-desktop { 
+        padding: 0 0; 
+      }
+      h1 {
+        font-size: 2.8rem; 
+      }
+      .section-padding { 
+        padding: 60px 20px; 
+      }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .em-mobile { 
+      padding: 0 0; 
+    }
+    h1 {
+      font-size: 2rem; 
+    }
+    .nav-links { 
+      display: none; 
+    }
+    .section-padding { 
+      padding: 40px 15px; 
+    }
+}
